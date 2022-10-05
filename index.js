@@ -9,6 +9,7 @@ function Navbar() {
     const { data, status } = session
     console.log("data:" + data)
     console.log("status" + status);
+    //I have console logged these values for better understanding purposes as based on these destructured values I have rendered the below components
     return (
         <>
             {status !== 'loading' && !data && <Link href='/api/auth/signin'>
