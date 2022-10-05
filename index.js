@@ -3,6 +3,8 @@ import { signIn, signOut, useSession } from 'next-auth/react'
 
 function Navbar() {
     const session = useSession()
+    //in order to only provide with sign out option once the user has signed in and
+   
     const { data, status } = session
     console.log("data:" + data)
     console.log("status" + status);
