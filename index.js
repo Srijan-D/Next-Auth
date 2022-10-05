@@ -2,6 +2,10 @@ import Link from "next/link";
 import { signIn, signOut, useSession } from 'next-auth/react'
 
 function Navbar() {
+    const session = useSession()
+    const { data, status } = session
+    console.log("data:" + data)
+    console.log("status" + status);
     return (
         <>
             <Link href='/api/auth/signin'>
