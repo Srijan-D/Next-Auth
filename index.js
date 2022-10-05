@@ -8,19 +8,19 @@ function Navbar() {
     console.log("status" + status);
     return (
         <>
-        {status !== 'loading' && !data && <Link href='/api/auth/signin'>
+            {status !== 'loading' && !data && <Link href='/api/auth/signin'>
                 <a onClick={e => {
                     e.preventDefault();
                     signIn();
                 }}>SignIn</a>
             </Link>}
-{data &&<Link href='/api/auth/signout'>
+            {data && <Link href='/api/auth/signout'>
                 <a onClick={e => {
                     e.preventDefault();
                     signOut();
                 }}>Sign out</a>
-            </Link> }
-            
+            </Link>}
+
         </>
     )
 }
