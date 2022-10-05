@@ -14,13 +14,13 @@ function Navbar() {
                     signIn();
                 }}>SignIn</a>
             </Link>}
-           
-            <Link href='/api/auth/signout'>
+{data &&<Link href='/api/auth/signout'>
                 <a onClick={e => {
                     e.preventDefault();
                     signOut();
                 }}>Sign out</a>
-            </Link>
+            </Link> }
+            
         </>
     )
 }
