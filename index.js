@@ -4,6 +4,7 @@ import { signIn, signOut, useSession } from 'next-auth/react'
 function Navbar() {
     const session = useSession()
     //in order to only provide with sign out option once the user has signed in and
+    //the sign out option only if the user has signed in we use useSession hook provided 
    
     const { data, status } = session
     console.log("data:" + data)
