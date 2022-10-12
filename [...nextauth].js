@@ -2,7 +2,8 @@ import NextAuth from "next-auth/next";
 import GithubProvider from "next-auth/providers/github"
 import GoogleProvider from "next-auth/providers/google"
 import Auth0Provider from "next-auth/providers/auth0"
-
+import DiscordProvider from "next-auth/providers/discord";
+import TwitterProvider from "next-auth/providers/twitter";
 export default NextAuth({
     providers: [
         GithubProvider({
@@ -18,5 +19,15 @@ export default NextAuth({
             clientSecret: process.env.AUTH0_CLIENT_SECRET,
             issuer: process.env.AUTH0_ISSUER,
         }),
+        DiscordProvider({
+            clientId: process.env.DISCORD_CLIENT_ID,
+            clientSecret: process.env.DISCORD_SECRET_KEY
+        }),
+        TwitterProvider({
+            clientId: process.env.TWITTER_CLIENT_ID,
+            clientSecret: process.env.TWITTER_CLIENT_SECRET,
+            version: "2.0",
+        })
+
     ],
 })
