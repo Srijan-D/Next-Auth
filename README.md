@@ -1,5 +1,5 @@
 # Next-Auth
-Implementation of NextAuth.js  for authentication using Nextjs
+Implementation of NextAuthJS  for authentication using Nextjs
 
 prior to this we need to add the callback url in the applications
 
