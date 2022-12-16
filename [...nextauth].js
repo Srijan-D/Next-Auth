@@ -28,6 +28,13 @@ export default NextAuth({
             clientSecret: process.env.TWITTER_CLIENT_SECRET,
             version: "2.0",
         })
-
     ],
+    secret: process.env.NEXTAUTH_SECRET!,//necessary for production
+  page:{
+    //Not necessary for production
+    signIn: "/auth/signin",
+    signOut: "/auth/signout",
+    error: "/auth/error", // Error code passed in query string as ?error=
+
+  }
 })
