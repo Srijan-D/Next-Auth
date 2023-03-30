@@ -15,7 +15,7 @@ Default value: string (SHA hash of the "options" object) in development, no defa
 Required: Yes, in production!
 
 
-🔥 Not providing any secret or NEXTAUTH_SECRET will throw an error in production.
+ Not providing any secret or NEXTAUTH_SECRET will throw an error in production.
 A random string is used to hash tokens, sign/encrypt cookies and generate cryptographic keys.
 
 
